@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background: #077bff;
+}
+.Start_page{
+    width: 400px;
+    background-color: beige;
+    height: 40vh;
+    box-shadow: 0 0 0.5rem 0.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: all;
+}
+.btn{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.quiz{
+    background: #fff;
+    width: 30rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+}
+
+.quiz header{
+    height: 3rem;
+    width: 30rem;
+    padding: 0 30px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: chartreuse;
+}
+.quiz header .title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.quiz header .timer{
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: cornflowerblue;
+    border: 3px solid red;
+}
+.quiz header .timer .timer-text{
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.timer-time{
+    font-weight: 500;
+    font-size: 18px;
+    background: cornsilk;
+    width: 3rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    border: 2px solid slategrey;
+    opacity: 0;
+}
+.timer-time-activate{
+    opacity: 1;
+} 
+.quiz section{
+    padding: 0.5rem;
+}
+.quiz section .quiz-question{
+    font-weight: 500;
+    font-size: 18px;
+    background: tan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quiz section .quiz-options{
+    /* background:slateblue; */
+    padding: 0.5rem;
+}
+.quiz section .quiz-options .quiz-option{
+    padding: 0.2rem;
+    border: 1px solid gainsboro;
+    height: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+    width: 28rem;
+}
+.quiz section .quiz-options .quiz-option span{
+    position: absolute;
+    left: 1rem;
+
+}
+.correct-answer{
+    background: darkgreen;
+}
+.wrong-answer{
+    background: red;
+}
+.disable-options{
+    pointer-events: none;
+}
+.quiz section .quiz-options .quiz-option:last-child{
+    margin-bottom: 0;
+}
+.quiz section .quiz-options .quiz-option:hover{
+    color: gold;
+    background: red;
+}
+.quiz section .quiz-options .quiz-option .icon{
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    text-align: center;
+    pointer-events: none;
+    border:2px solid transparent;
+    position: absolute;
+    right: 1rem;
+}
+.quiz section .quiz-options .quiz-option .tick{
+    background: green;
+    border-color: black;
+}
+.quiz section .quiz-options .quiz-option  .cross{
+    background: red;
+    border-color: white;
+}
+.quiz footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem;
+    align-items: center;
+    background: darkcyan;
+    height: 3rem;
+}
+.quiz footer .current_question span{
+    display: flex;
+    user-select: none;
+    justify-content: space-between;
+    align-items: center;
+}
+.quiz footer .current_question span p{
+    font-weight: 500;
+    padding:0 0.1rem;
+}
+.quiz footer .current_question span p:first-child{  
+    padding-left:0;
+}
+.next-question{
+    height: 2rem;
+    padding: 0 0.2rem;
+    font-size: 1.2rem;
+    border:none;
+    color: #fff;
+    background: blue;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    opacity: 0.5;
+    pointer-events: none;
+}
+.next-question-on{
+    opacity: 1;
+    pointer-events: all;
+}
+.quiz footer button:hover{
+    background: green;
+}
+
+.result{
+    background: #fff;
+    width: 30rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.result .icon{
+    background: yellow;
+    font-size: 6rem;
+    color: #077bff;
+    margin-bottom: 1rem;
+}
+.result .result-title{
+    background: turquoise;
+    font-size: 2rem;
+    font-weight: 500;
+    color: darkgreen;
+    margin-bottom: 0.4rem;
+}
+.result .result-text{
+    background: red;
+    margin-bottom: 0.4rem;
+}
+.result .result-text span{
+    display: flex;
+    user-select: none;
+    justify-content: space-between;
+    align-items: center;
+    color: darkorange;
+}
+.result .result-text span p{
+    font-weight: 500;
+    padding:0 0.3rem;
+}
+.result .result-text span p:last-child{ 
+    padding-right:0;
+}
+.result .buttons{
+    background: red;
+    margin-bottom: 0.4rem;
+    padding: 0.4rem;
+    width: 20rem;
+}
+.result .buttons button{
+    height: 2rem;
+    padding: 0 0.2rem;
+    font-size: 1.2rem;
+    border:none;
+    color: black;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.result .buttons .replay-button{
+    background: wheat;
+
+}
+.result .buttons .quit-button{
+    background: aliceblue;
+    
+}
+.leaderboard{
+    background: #fff;
+    width: 30rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.leaderboard table  th, td{
+    border: 1px solid black;
+}
+
+.activate{
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 5;
+}
+

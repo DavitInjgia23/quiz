@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="Start_page activate" id="start_page">
+        <h1>Start Quiz</h1>
+        <form action="" class="inputs" id="start_page_forms">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" required><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" required><br>
+            <label for="quantity">Group number: </label><br>
+            <input type="number" id="quantity" name="quantity" required> <br>
+            <label for="difficulty">Choose a difficulty:</label><br>
+            <select id="difficulty" required>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="hard">hard</option>
+            </select><br>
+            
+        </form>
+        <button class="btn" id="submitBtn">Start Quiz</button>  
+    </div> 
+    <!-- Quiz Box -->
+   
+       
+    <div class="quiz" id="quiz">
+        <header>
+            <div class="title">Quiz Application</div>
+            <div class="timer">
+                <div class="timer-text" id="timer-text">Time left</div>
+                <div class="timer-time" id="timer-time"></div>
+            </div>
+        </header>
+        <section>
+             <div class="quiz-question" id="quiz-question"></div>
+             <div class="quiz-options" id="quiz-options"></div>
+        </section>
+        <footer>
+            <div class="current_question" id="current_question">
+                
+            </div>
+            <button class="next-question" id="next-question">Next Question</button>
+        </footer>
+    </div>
+    <div class="result" id="result">
+        <div class="icon"><i class="fas fa-crown"></i></div>
+        <div class="result-title">
+            Quiz Completed!
+        </div>
+        <div class="result-text"id="result-text">
+           
+        </div>
+        <div class="buttons">
+            <button class="replay-button" id="replay-button">Replay</button>
+            <button class="leaderboard-button" id="leaderboard-button">LeaderBoard</button>
+        </div>
+    </div>
+    <div class="leaderboard" id="leaderboard">
+        <table id="leaderboard-table">
+            <tr>
+              <th>Firstname and Lastname</th>
+              <th>Group number</th>
+              <th>Difficulty</th>
+              <th>Score</th>
+            </tr>
+        </table>
+        <button class="btn back-results" id="back-results">Back to Results</button>
+    </div>
+    
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
